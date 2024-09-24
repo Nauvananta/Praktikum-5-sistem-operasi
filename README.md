@@ -1,6 +1,7 @@
 # Praktikum-5-sistem-operasi
 
-1. Eksekusi seluruh profile yang ada :                                                                                                        
+1. Eksekusi seluruh profile yang ada :
+                                                                                                   
 a. Edit file profile /etc/profile dan tampilkan pesan sebagai berikut :                                                
 echo “Profile dari /etc/profile”                                                                                       
 ![Screenshot from 2024-09-24 19-17-14](https://github.com/user-attachments/assets/f89e9d09-ddc7-40f8-b232-0700f724c8f7)
@@ -32,11 +33,13 @@ Jelaskan perbedaan kedua utilitas tersebut.
 ![Screenshot from 2024-09-24 19-41-03](https://github.com/user-attachments/assets/a34cc1cd-54bf-4793-943a-7cf2f918cc33)  
 Perintah su (substitute user) digunakan untuk berpindah pengguna dalam sistem Linux. Jika kita menjalankan su lblanket, kita hanya mengganti identitas pengguna ke lblanket tanpa mengubah lingkungan atau variabel dari pengguna sebelumnya, seperti PATH. Sedangkan, jika menggunakan su - lblanket, perintah ini tidak hanya mengganti pengguna tetapi juga memuat seluruh lingkungan pengguna lblanket, termasuk semua variabel dan pengaturan khususnya, sehingga sesi pengguna baru terasa seperti masuk dari awal. Kesimpulannya, perbedaan utama adalah pada lingkungan pengguna, di mana su - memuatnya secara penuh, sedangkan su tidak.
 
-2. Prompt String (PS)                                                                                                    
+2. Prompt String (PS)
+                              
 a. Edit file .bash_profile, ganti prompt PS1 dengan ‘>’. Instruksi export diperlukan dengan                            
 parameter nama variable tersebut, agar perubahan variable PS1 dikenal oleh semua shell                                 
 PS1=‟> „                                                                                                               
-export PS1                                                                                                             
+export PS1            
+
 b. Eksperimen hasil PS1 :                                                                                              
 $ PS1=“\! > “                                                                                                          
 69 > PS1=”\d > “                                                                                                       
@@ -47,7 +50,8 @@ Saya=mahasiswa > PS1=”\w >”
 ![Screenshot from 2024-09-24 19-45-23](https://github.com/user-attachments/assets/47806683-33c1-4e98-9d87-ed24f6ce5baa)
 ![Screenshot from 2024-09-24 19-42-24](https://github.com/user-attachments/assets/1e3c8969-532e-46ca-b6c0-26717323ee89)
 
-3. Logout                                                                                                              
+3. Logout
+                                                                                                      
 Edit file .bash_logout, tampilkan pesan dan tahan selama 5 detik, sebelum eksekusi logout                              
 Echo “Terima kasih atas sesi yang diberikan”                                                                           
 Sleep 5                                                                                                                
@@ -55,7 +59,8 @@ clear
 ![Screenshot from 2024-09-24 19-53-04](https://github.com/user-attachments/assets/b8ce818b-f483-48b8-b0fa-30aaf5cc211e)
 ![Screenshot from 2024-09-24 19-51-37](https://github.com/user-attachments/assets/029aa920-c519-4ab9-b1ee-886f7f2a7607)
 
-4. Bash script                                                                                                           
+4. Bash script
+                                  
 a. Buat 3 buah script p1.sh, p2.sh, p3.sh dengan isi masing-masing :                                                  
 p1.sh                                                                                                                  
 #! /bin/bash                                                                                                           
@@ -84,7 +89,8 @@ $ ( ./p1.sh ; ./p3.sh ) &
 ![Screenshot from 2024-09-24 20-20-17](https://github.com/user-attachments/assets/da55147c-ab77-4c5a-87d5-970de94da815)
 ![Screenshot from 2024-09-24 21-28-53](https://github.com/user-attachments/assets/e0bc6a8f-a8a8-4ab1-994b-1aa0a0b86f92)
 
-5. Jobs                                                                                                                  
+5. Jobs
+                                                                                                     
 a. Buat shell-script yang melakukan loop dengan nama pwaktu.sh,                                                        
 setiap 10 detik, kemudian menyimpan tanggal dan jam pada file hasil.                                                   
 #!/bin/bash                                                                                                            
@@ -116,7 +122,8 @@ $ kill [Nomor PID]
 ![Screenshot from 2024-09-24 20-44-33](https://github.com/user-attachments/assets/f0d2203f-3b9d-46fb-8ef1-2518e418e2bb)
 ![Screenshot from 2024-09-24 20-44-51](https://github.com/user-attachments/assets/01c6d23c-b5d1-4c16-bb3f-ba08200635c0)
 
-6. History                                                                                                            
+6. History
+                                                                                       
 a. Ganti nilai HISTSIZE dari 1000 menjadi 20                                                                        
 $ HISTSIZE=20
 $ h                                                                                                                   
