@@ -55,7 +55,7 @@ Saya=mahasiswa > PS1=”\w >”
 Edit file .bash_logout, tampilkan pesan dan tahan selama 5 detik, sebelum eksekusi logout                              
 Echo “Terima kasih atas sesi yang diberikan”                                                                           
 Sleep 5                                                                                                                
-clear
+clear                                                                                                                                                                                                                                                    
 ![Screenshot from 2024-09-24 19-53-04](https://github.com/user-attachments/assets/b8ce818b-f483-48b8-b0fa-30aaf5cc211e)
 ![Screenshot from 2024-09-24 19-51-37](https://github.com/user-attachments/assets/029aa920-c519-4ab9-b1ee-886f7f2a7607)
 
