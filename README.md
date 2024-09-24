@@ -95,24 +95,44 @@ sleep 10
 done                                                                                                                   
 ![Screenshot from 2024-09-24 20-24-16](https://github.com/user-attachments/assets/618b6483-8198-443e-ac5b-93b216f90ed0)
 ![Screenshot from 2024-09-24 20-23-55](https://github.com/user-attachments/assets/9dbda426-ba26-4031-abc9-d3a17416a1b2)
-b. Jalankan sebagai background; kemudian jalankan satu program (utilitas find) di background                          
-sebagai berikut :                                                                                                     
+
+b. Jalankan sebagai background; kemudian jalankan satu program (utilitas find) di background
+sebagai berikut :                                                                                                    
 $ jobs                                                                                                                
 $ find / -print > files 2>/dev/null &                                                                                 
 $ jobs                                                                                                                
-![Screenshot from 2024-09-24 20-41-16](https://github.com/user-attachments/assets/a20d59ff-dca4-4ee1a28d-94bf1dce6416)
-c. Jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program tersebut ke                         background
+![Screenshot from 2024-09-24 20-41-16](https://github.com/user-attachments/assets/8f8dad27-7347-4a0d-be38-0683bb890007)
+
+c. Jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program tersebut ke
+background                                                                                                            
 $ fg %1                                                                                                               
 $ bg                                                                                                                  
-![Screenshot from 2024-09-24 20-43-32](https://github.com/user-attachments/assets/b5b8b336-165d-479fb39c-295109905252)
+![Screenshot from 2024-09-24 20-43-32](https://github.com/user-attachments/assets/8be17b95-3a60-4e11-9238-dd7bed74e27f)
+
 d. Stop program background dengan utilitas kil                                                                        
 $ ps x                                                                                                                
-$ kill [Nomor PID]
-![Screenshot from 2024-09-24 20-43-44](https://github.com/user-attachments/assets/a80f7dc0-76c6-44e5-9e79fa7e0048e269)
-![Screenshot from 2024-09-24 20-44-33](https://github.com/user-attachments/assets/d4520de4-0247-4100b8fb-26bf8c067897)
-![Screenshot from 2024-09-24 20-44-51](https://github.com/user-attachments/assets/8e8d0adc-2227-4a52b414-0d4d361fe91a)
+$ kill [Nomor PID]                                                                                                    
+![Screenshot from 2024-09-24 20-43-44](https://github.com/user-attachments/assets/dc86d201-3ac8-4ff3-89b3-edb2fa76d787)
+![Screenshot from 2024-09-24 20-44-33](https://github.com/user-attachments/assets/f0d2203f-3b9d-46fb-8ef1-2518e418e2bb)
+![Screenshot from 2024-09-24 20-44-51](https://github.com/user-attachments/assets/01c6d23c-b5d1-4c16-bb3f-ba08200635c0)
 
 6. History                                                                                                            
-a. Ganti nilai HISTSIZE dari 1000 menjadi 20                                                                          
-$ HISTSIZE=20                                                                                                         
-$ h                            
+a. Ganti nilai HISTSIZE dari 1000 menjadi 20                                                                        
+$ HISTSIZE=20
+$ h                                                                                                                   
+![Screenshot from 2024-09-24 20-45-32](https://github.com/user-attachments/assets/b8129bbb-827c-4a24-9b2c-9ee22e1aeb88)
+
+b. Gunakan fasilitas history dengan mengedit instruksi baris ke 5 dari instruksi yang terakhir
+dilakukan                                                                                                             
+$ !-5     
+
+c. Ulangi instruksi yang terakhir. Gunakan juga ^P dan ^N untuk bernavigasi pada history bufer                        
+$ !!                
+
+d. Ulangi instruksi pada history bufer nomor 150                                                                      
+$ !150                                                                                                                
+![Screenshot from 2024-09-24 20-48-25](https://github.com/user-attachments/assets/8dc8b12a-9416-43a3-a47b-4d8e697e51b7)
+
+e. Ulangi instruksi dengan prefix “ls”                                                                              
+$ !ls                                                                                                                 
+![Screenshot from 2024-09-24 20-49-10](https://github.com/user-attachments/assets/994de279-cadf-4ce9-8c85-6cae2306183f)
