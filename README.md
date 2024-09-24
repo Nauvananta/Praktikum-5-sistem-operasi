@@ -73,7 +73,7 @@ who
 p3.sh                                                                                                                  
 #! /bin/bash                                                                                                           
 echo “Program p3”                                                                                                      
-ps x
+ps x                                                                                                                                                                                                                                                      
 ![Screenshot from 2024-09-24 19-56-43](https://github.com/user-attachments/assets/430c5692-1534-4175-9991-f1115dceac41)
 ![Screenshot from 2024-09-24 19-54-41](https://github.com/user-attachments/assets/61b99d50-de84-413d-b1f2-9ca92bd7fe81)
 ![Screenshot from 2024-09-24 19-55-47](https://github.com/user-attachments/assets/371835e1-7da7-4b99-8983-fdda3cc5057b)
