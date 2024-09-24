@@ -29,7 +29,7 @@ kemudian gunakan opsi – sebagai berikut :
 $ su – mahasiswa                                                                                                       
 $ exit                                                                                                                 
 Jelaskan perbedaan kedua utilitas tersebut.                                                                            
-![Screenshot from 2024-09-24 19-41-03](https://github.com/user-attachments/assets/a34cc1cd-54bf-4793-943a-7cf2f918cc33)
+![Screenshot from 2024-09-24 19-41-03](https://github.com/user-attachments/assets/a34cc1cd-54bf-4793-943a-7cf2f918cc33)  
 Perintah su (substitute user) digunakan untuk berpindah pengguna dalam sistem Linux. Jika kita menjalankan su lblanket, kita hanya mengganti identitas pengguna ke lblanket tanpa mengubah lingkungan atau variabel dari pengguna sebelumnya, seperti PATH. Sedangkan, jika menggunakan su - lblanket, perintah ini tidak hanya mengganti pengguna tetapi juga memuat seluruh lingkungan pengguna lblanket, termasuk semua variabel dan pengaturan khususnya, sehingga sesi pengguna baru terasa seperti masuk dari awal. Kesimpulannya, perbedaan utama adalah pada lingkungan pengguna, di mana su - memuatnya secara penuh, sedangkan su tidak.
 
 2. Prompt String (PS)                                                                                                    
@@ -83,3 +83,36 @@ $ ( ./p1.sh ; ./p3.sh ) &
 ![Screenshot from 2024-09-24 20-15-53](https://github.com/user-attachments/assets/5edd0beb-3a6a-447c-b36d-dba204a21c86)
 ![Screenshot from 2024-09-24 20-20-17](https://github.com/user-attachments/assets/da55147c-ab77-4c5a-87d5-970de94da815)
 ![Screenshot from 2024-09-24 21-28-53](https://github.com/user-attachments/assets/e0bc6a8f-a8a8-4ab1-994b-1aa0a0b86f92)
+
+5. Jobs                                                                                                                  
+a. Buat shell-script yang melakukan loop dengan nama pwaktu.sh,                                                        
+setiap 10 detik, kemudian menyimpan tanggal dan jam pada file hasil.                                                   
+#!/bin/bash                                                                                                            
+while [ true ]                                                                                                         
+do                                                                                                                     
+date >> hasil                                                                                                          
+sleep 10                                                                                                               
+done                                                                                                                   
+![Screenshot from 2024-09-24 20-24-16](https://github.com/user-attachments/assets/618b6483-8198-443e-ac5b-93b216f90ed0)
+![Screenshot from 2024-09-24 20-23-55](https://github.com/user-attachments/assets/9dbda426-ba26-4031-abc9-d3a17416a1b2)
+b. Jalankan sebagai background; kemudian jalankan satu program (utilitas find) di background                          
+sebagai berikut :                                                                                                     
+$ jobs                                                                                                                
+$ find / -print > files 2>/dev/null &                                                                                 
+$ jobs                                                                                                                
+![Screenshot from 2024-09-24 20-41-16](https://github.com/user-attachments/assets/a20d59ff-dca4-4ee1a28d-94bf1dce6416)
+c. Jadikan program ke 1 sebagai foreground, tekan ^Z dan kembalikan program tersebut ke                         background
+$ fg %1                                                                                                               
+$ bg                                                                                                                  
+![Screenshot from 2024-09-24 20-43-32](https://github.com/user-attachments/assets/b5b8b336-165d-479fb39c-295109905252)
+d. Stop program background dengan utilitas kil                                                                        
+$ ps x                                                                                                                
+$ kill [Nomor PID]
+![Screenshot from 2024-09-24 20-43-44](https://github.com/user-attachments/assets/a80f7dc0-76c6-44e5-9e79fa7e0048e269)
+![Screenshot from 2024-09-24 20-44-33](https://github.com/user-attachments/assets/d4520de4-0247-4100b8fb-26bf8c067897)
+![Screenshot from 2024-09-24 20-44-51](https://github.com/user-attachments/assets/8e8d0adc-2227-4a52b414-0d4d361fe91a)
+
+6. History                                                                                                            
+a. Ganti nilai HISTSIZE dari 1000 menjadi 20                                                                          
+$ HISTSIZE=20                                                                                                         
+$ h                            
